@@ -1,11 +1,15 @@
-// class is like a blueprint 
-// class with constructor
-
 class User {
 
   constructor(email, name) {
     this.email = email;
-    this.name = name
+    this.name = name;
+  }
+
+  login() {
+    console.log(this.email, 'just logged in');
+  }
+  logout() {
+    console.log(this.email, 'has logged out');
   }
 
 };
@@ -18,5 +22,5 @@ class User {
 var userOne = new User('ryu@ninjas.com', 'Ryu');
 var userTwo = new User('yoshi@mariocorp.com', 'Yoshi');
 
-console.log(userOne);
-console.log(userTwo);
+userOne.login();
+userTwo.logout();
