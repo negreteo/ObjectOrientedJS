@@ -21,8 +21,23 @@ class User {
   }
 }
 
+// admin inherits user
+class Admin extends User {
+  deleteUser(user) {
+    users = users.filter(u => {
+      return u.email != user.email;
+    })
+  }
+}
+
 
 var userOne = new User('ryu@ninjas.com', 'Ryu');
 var userTwo = new User('yoshi@mariocorp.com', 'Yoshi');
 
-userOne.login().updateScore().updateScore().logout();
+var admin = new Admin('mario@mariocorp.com', 'Mario');
+
+var users = [userOne, userTwo, admin]
+
+//user.deleteUser(userOne); // will not work
+admin.deleteUser(userOne);
+console.log(users);
