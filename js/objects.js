@@ -1,22 +1,22 @@
-var userOne = {
-  email: 'ryu@ninjas.com',
-  name: 'Ryu',
-  login() {
-    console.log(this.email, ' has logged in');
-  },
-  logout() {
-    console.log(this.email, ' has logged out');
+// class is like a blueprint 
+// class with constructor
+
+class User {
+
+  constructor(email, name) {
+    this.email = email;
+    this.name = name
   }
-}
 
-userOne.name = 'Yoshi';
-userOne['name'] = 'Mario';
+};
 
-var prop = 'email';
+// the 'new' keyword
+// - creates a new empty object {}
+// - sets the value of 'this' to be the new empty object
+// - calls the constructor method
 
-console.log(userOne[prop]);
+var userOne = new User('ryu@ninjas.com', 'Ryu');
+var userTwo = new User('yoshi@mariocorp.com', 'Yoshi');
 
-userOne.age = 25;
 console.log(userOne);
-
-userOne.LogInfo = function () {};
+console.log(userTwo);
