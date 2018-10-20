@@ -1,5 +1,3 @@
-// object literals
-
 var userOne = {
   email: 'ryu@ninjas.com',
   name: 'Ryu',
@@ -9,39 +7,16 @@ var userOne = {
   logout() {
     console.log(this.email, ' has logged out');
   }
-};
+}
 
-userOne.login();
-userOne.logout();
+userOne.name = 'Yoshi';
+userOne['name'] = 'Mario';
 
+var prop = 'email';
 
-// // create user one
-// var userOneEmail = "ryu@ninjas.com";
-// var userOneName = "Ryu";
-// var userOneFriends = ['Yoshi'];
+console.log(userOne[prop]);
 
-// // create user two
-// var userTwoEmail = "yoshi@mariocorp.com";
-// var userTwoName = "Yoshi";
-// var userTwoFriends = ['Ryu', 'Mario'];
+userOne.age = 25;
+console.log(userOne);
 
-// // create user three
-// var userThreeEmail = "mario@mariocorp.com";
-// var userThreeName = "Mario";
-// var userThreeFriends = ['Mario'];
-
-// function login(email) {
-//   console.log(email, ' is now online');
-// }
-
-// function logout(email) {
-//   console.log(email, ' has logged out');
-// }
-
-// function logFriends(friends) {
-//   friends.foreach(friend => {
-//     console.log(friend);
-//   });
-// }
-
-// login(userOneEmail);
+userOne.LogInfo = function () {};
